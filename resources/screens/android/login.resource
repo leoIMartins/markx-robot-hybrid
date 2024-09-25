@@ -7,6 +7,3 @@ Library       AppiumLibrary
 Do login
     Input Text       xpath=//*[@resource-id="apiIp"]       ${API_IP}
     Click Element    xpath=//*[@resource-id="signInButton"]
-
-
-    adsda
