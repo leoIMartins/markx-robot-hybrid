@@ -2,6 +2,8 @@
 Documentation            Elementos e ações da tela minhas tarefas
 
 Library       AppiumLibrary
+Resource       ../../utils.resource
+
 
 *** Variables ***
 ${new_task_input}        accessibility_id=newTask
@@ -14,9 +16,9 @@ Create a new task
 
     Wait Until Element Is Visible       ${new_task_input}    5
 
-    Input Text       ${new_task_input}      ${task_name}
+    Input Text Slowly       ${new_task_input}      ${task_name}
     Click Element    ${create_button}
-
+    Sleep    2
     Close keyboard
 
 Should have task

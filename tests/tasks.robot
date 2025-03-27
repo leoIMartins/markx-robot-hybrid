@@ -3,6 +3,7 @@ Documentation        Suite de testes do cadastro de tarefas
 
 Resource        ${EXECDIR}/resources/base.resource
 
+Suite Setup      Remove all tasks from database
 Test Setup       Start session
 Test Teardown    Finish session
 
@@ -20,7 +21,7 @@ Deve poder cadastrar uma nova tarefa
 Deve poder remover uma tarefa indesejada
     [Tags]    remove
     
-    ${task}      Set Variable        Comprar refrigerante
+    ${task}      Set Variable        Ler um livro
     Remove task from database        ${task}
     
     Do login
@@ -33,7 +34,7 @@ Deve poder remover uma tarefa indesejada
 Deve poder concluir uma tarefa
     [Tags]    done
     
-    ${task}      Set Variable        Estudar XPath
+    ${task}      Set Variable        Ir a academia
     Remove task from database        ${task}
     
     Do login

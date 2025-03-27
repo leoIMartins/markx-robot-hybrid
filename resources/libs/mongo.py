@@ -10,3 +10,9 @@ def remove_task_by_name(task_name):
     collection = db['tasks']
     collection.delete_many({'text': task_name})
     print('Removendo a tarefa ' + task_name)
+
+@keyword('Remove all tasks from database')
+def remove_all_tasks():
+    collection = db['tasks']
+    collection.delete_many({})
+    print('Removendo todas as tarefas')

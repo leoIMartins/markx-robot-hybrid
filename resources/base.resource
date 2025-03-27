@@ -10,7 +10,7 @@ Resource       screens/${PLATFORM}/login.resource
 Resource       screens/${PLATFORM}/tasks.resource
 
 *** Variables ***
-${API_IP}         192.168.1.12
+${API_IP}         192.168.1.16
 
 *** Keywords ***
 Start session
